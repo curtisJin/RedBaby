@@ -1,0 +1,603 @@
+@charset "utf-8";
+/* 公共样式、头部和尾部的样式 */
+
+
+/* 公共样式 */
+body{
+    background:#fff;
+}
+a{
+    color:#333;
+}
+.root1200 .ng-top-banner,.root1200 .ng-toolbar,.root1200 .ng-header,.root1200 .ng-nav-bar,.root1200 .sp-nav,
+.root1200 .ng-footer .ng-ser-box,.root1200 .ng-s-footer{
+    min-width:1190px;
+    margin:0 auto;
+}
+
+
+
+
+/* ng-top-banner */
+.ng-top-banner{
+    width:100%;
+    position:relative;
+}
+.top-active-wrap{
+    position:relative;
+    width:100%;
+    overflow:hidden;
+}
+.top-active-wrap img{
+    position:relative;
+    width:1920px!important;
+    left:50%!important;
+    top:0!important;
+    margin-left:-960px!important;
+}
+/* 关闭按钮 */
+.ng-top-banner .btn{
+    position:absolute;
+    top:3px;
+    right:3px;
+    width:16px;
+    height:16px;
+    color:#fff;
+    overflow:hidden;
+}
+.ng-top-banner .btn i{
+    width:16px;
+    height:16px;
+    cursor:pointer;
+    display: block;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.ng-top-banner .btn .bg{
+    background:#333;
+    opacity:.3;
+}
+.ng-top-banner .btn .text{
+    z-index: 2;
+    font: 16px/18px simsun;
+    text-align: center;
+}
+
+
+/* .ng-toolbar */
+.ng-toolbar{
+    width:100%;
+    height:35px;
+    line-height:35px;
+    background:#f5f5f5;
+    border-bottom:1px solid #eee;
+    position:relative;
+}
+.ng-toolbar .ng-toolbar-con{
+    width:1190px;
+    margin:0 auto;
+}
+
+/* ng-toolbar-left */
+.ng-toolbar-left{
+    float:left;
+}
+.ng-toolbar-left .ng-bar-node{
+    display:block;
+    float:left;
+    padding:0 10px 0 0;
+}
+
+/* .ng-bar-node */
+.ng-bar-node{
+    color:#666;
+}
+.ng-bar-node .icon-fangzi222{
+    display:inline-block;
+    font-size:20px;
+    width:16px;
+    margin-right:3px;
+    float: left;
+    line-height:31px;
+}
+
+/* 网站导航 、商家入驻、客户服务*/
+.ng-toolbar .ng-bar-node-box{
+    position:relative;
+    float:left;
+    margin-left:-1px;
+}
+.ng-toolbar .ng-bar-node{
+    display: block;
+    position: relative;
+    float: left;
+    padding: 0 10px;
+    overflow: hidden;
+}
+.ng-toolbar .ng-bar-node, a.ng-close {
+    line-height: 35px;
+    height: 35px;
+}
+.ng-toolbar .ng-bar-node-site {
+    width: 65px;
+}
+.ng-toolbar .ng-bar-node span {
+    display: inline-block;
+    cursor: pointer;
+}
+.ng-toolbar .ng-bar-node em.icon-xiajiantou{
+    display: inline-block;
+    font-size: 10px;
+    width: 10px;
+    color: #bbb;
+    margin-left: 3px;
+    vertical-align: middle;
+}
+/* 鼠标滑过效果 */
+.ng-bar-node-site:hover em{
+    transition:.2s;
+    transform: rotate(180deg);
+}
+.ng-toolbar .ng-d-box {
+    position: absolute;
+    top: 35px;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+.ng-toolbar .ng-sn-site-nav {
+    width: 988px;
+    padding: 20px 0;
+    left: auto;
+}
+
+/* 右侧toolbar */
+.ng-toolbar-right{
+    float:right;
+}
+
+/* 登录注册 */
+.ng-toolbar .ng-bar-node {
+    display: block;
+    position: relative;
+    float: left;
+    padding: 0 10px;
+    overflow: hidden;
+}
+.ng-toolbar a {
+    color: #666;
+}
+.ng-toolbar .reg-bar-node .reg-bbb {
+    position: relative;
+    margin-left: 10px;
+    color: #F60;
+}
+
+/* 我的订单 *//* 我的易购 */
+.ng-toolbar .ng-bar-node-fix {
+    width: 65px;
+}
+/* 购物车 */
+.ng-toolbar .ng-bar-node-mini-cart {
+    font-family: "Microsoft Yahei";
+    text-decoration: none;
+    padding: 0 5px;
+    color: #F60!important;
+}
+
+
+/* 头部搜索频道 */
+.ng-header{
+    width:100%;
+    height:110px;
+    background-color:#fff;
+}
+.ng-channel-header .ng-header-con{
+    margin:0 auto;
+    height:100%;
+}
+.ng-header .wrapper{
+    width:1190px;
+    position:relative;
+    margin:0 auto;
+}
+
+/* 左侧logo盒子*/
+.ng-header .ng-logo-box{
+    width:440px;
+    height:100px;
+    float:left;
+}
+.ng-header a.ng-logo{
+    float:left;
+    height:90px;
+    width:190px;
+    overflow:hidden;
+}
+.ng-header .channel-logo{
+    float:left;
+    display:inline;
+    margin-left:5px;
+}
+
+/* 中间搜索框 */
+.ng-header .ng-search{
+    position:absolute;
+    top:0;
+    left:440px;
+    width:550px;
+    height:100%;
+}
+
+.g-search {
+    display: inline;
+    position: relative;
+    float: right;
+    width: 550px;
+    margin: 30px 0 0 0;
+    z-index: 6790;
+    font-family: 'Microsoft YaHei';
+}
+
+.g-search .icon-sousuo {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 40px;
+    line-height: 40px;
+    line-height: 42px\0;
+    text-align: right;
+    font-size: 16px;
+    color: #ccc;
+}
+.g-search .search-keyword-box{
+    float:left;
+    width:420px;
+    padding:0 0 0 28px;
+    border:2px solid #FA0;
+    border-right:none;
+    position:relative;
+}
+.g-search .search-keyword {
+    width: 410px;
+    padding: 9px 10px 9px 0;
+    height: 18px;
+    line-height: 18px;
+    margin-top: 0;
+    border: none;
+    background: #FFF;
+    color: #BBB;
+    font-size: 12px;
+    font-family: 'MicroSoft YaHei';
+    border-radius: 0;
+    -webkit-border-radius: 0;
+}
+.g-search .search-btn {
+    width: 100px;
+    height: 40px;
+    padding: 0;
+    font-size: 14px;
+    font-family: 'MicroSoft YaHei';
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-indent: 2px;
+    color: #FFF;
+    border: 0;
+    cursor: pointer;
+    background: #FA0;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -webkit-appearance: none;
+    float:left;
+}
+
+/* 热搜关键词 */
+.g-search-hotwords {
+    float: left;
+    width: 100%;
+    height: 18px;
+    margin-top: 5px;
+    overflow: hidden;
+    color:#999;
+    font-size: 0;
+}
+
+.g-search-hotwords a{
+    float:left;
+    white-space: nowrap;
+    font-size:12px;
+    margin:3px 0 3px -11px;
+    padding:0 20px 0 10px;
+    border-left:1px solid #ddd;
+    height:12px;
+    line-height:12px;
+    color:#999;
+}
+
+/* 全部商品 */
+.ng-nav-bar-chanel{
+    height:3px;
+    border:0;
+    width:100%;
+    position:relative;
+}
+
+.ng-sort{
+    position:absolute;
+    width:190px;
+    left:50%;
+    margin-left:-595px;
+    top:0;
+}
+.ng-all-hook{
+    position:absolute;
+    display:block;
+    left:0;
+    top:0;
+    height:38px;
+    overflow:visible;
+    width:163px;
+    line-height:38px;
+    font-size:13px;
+    background:#FA0;
+    padding-left:27px;
+    color:#fff!important;
+    font-weight:400;
+    text-decoration:none;
+}
+.ng-all-hook i{
+    position:absolute;
+    display:block;
+    width:12px;
+    height:12px;
+    top:14px;
+    left:9px;
+    background:url(../img/newbg.png);
+}
+.ng-all-hook span{
+    font-weight:700;
+}
+/* 商品分类列表 */
+
+.ng-sort-list-box, .ng-sort-list-box .nav-cover {
+    height: 482px;
+    position: absolute;
+    left: 0;
+    width: 190px;
+}
+.ng-sort-list-box{
+    top:38px;
+}
+.ng-sort-list-box .nav-cover {
+    top: 0;
+    background: #252221;
+    opacity: .9;
+}
+.ng-sort-list-box .sort-list{
+    position:absolute;
+    left:0;
+    top:1px;
+    height:480px;
+    width:190px;  
+}
+.ng-sort-list-box .sort-list li{
+    width:175px;
+    height:32px;
+    padding:0 8px 0 10px;
+    line-height:32px;
+}
+.ng-sort-list-box .sort-list li a{
+    display:inline-block;
+    color:#fff;
+    vertical-align:middle;
+}
+
+.ng-sort-list-box .sort-list li em{
+    display:inline-block;
+    height:12px;
+    width:1px;
+    opacity:.4;
+    background:#d8d8d8;
+    margin:0 5px;
+    vertical-align:middle;
+}
+
+/* 少儿动画和有机馆 */
+.sp-nav{
+    height:36px;
+    margin-top:-1px;
+    width:1190px;
+}
+.sp-nav ul{
+    padding-left:210px;
+}
+.sp-nav li{
+    float:left;
+    padding:0 20px;
+}
+.sp-nav li a{
+    position: relative;
+    float: left;
+    font: 15px/36px 'microsoft yahei';
+}
+.sp-nav li.now a {
+    color: #f60;
+}
+.sp-nav li a i {
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    right: -18px;
+    top: 3px;
+    overflow: hidden;
+}
+.sp-nav li a i.hot {
+    background: url(../img/hot.png) no-repeat 0 0;
+}
+
+
+
+
+
+
+/* 底部公共样式 */
+.ng-footer .ng-ser-box {
+    width: 100%;
+    background: #f5f5f5;
+    border-top: 1px solid #e7e7e7;
+}
+.ng-footer .ng-ser-box-con{
+    margin:0 auto;
+    overflow: hidden;
+    width:1190px;
+}
+
+/* .ng-promise */
+.ng-footer .ng-promise{
+    width:1250px;
+    padding:12px 0;
+    height:73px;
+    border-bottom:1px solid #eaeaea;
+}
+.ng-footer .ng-promise dl{
+    width:250px;
+    float:left;
+    overflow:hidden;
+}
+.ng-footer .ng-promise dt{
+    float:left;
+    width:48px;
+    height:48px;
+    margin-right:8px;
+}
+.ng-footer .ng-promise dt img {
+    display: block;
+    width: 48px;
+    height: 48px;
+}
+.ng-footer .ng-promise dd {
+    width: 180px;
+    float:left;
+    height:48px;
+}
+.ng-footer .ng-promise dd p {
+    line-height: 24px;
+    width: 100%;
+    color: #545454;
+}
+.ng-footer .ng-promise dd p strong {
+    font-weight: 700;
+    color: #222;
+    font-size: 14px;
+}
+
+/* ng-help-box */
+.ng-footer .ng-help-box{
+    float:left;
+    height:180px;
+    width:1050px; 
+}
+.ng-help-box dl{
+    float:left;
+    height:160px;
+    width:210px;
+}
+.ng-help-box dt{
+    width:100%;
+    line-height:40px;
+    font-weight:700;
+    color:#545454;
+    height:35px;
+    font-size:14px;
+    overflow:hidden;
+}
+.ng-help-box dd{
+    width:100%;
+    line-height:22px;
+}
+.ng-help-box dd{
+    color:#545454;
+}
+
+/* .ng-app-down */
+.ng-app-down{
+    float: left;
+    width:90px;
+    height:180px;
+}
+.ng-app-down p{
+    width:100%;
+    line-height:40px;
+    font-weight:700;
+    color:#545454;
+    height:35px;
+    font-size:14px;
+    margin-bottom:5px;
+    overflow:hidden;
+}
+
+
+/* ng-s-footer */
+.ng-s-footer{
+    background:#FFF;
+    width:100%;
+    padding-top:15px;
+    text-align:center;
+}
+.ng-s-footer .ng-s-f-con{
+    margin:0 auto;
+    height:210px;
+    width:1190px;
+    min-width:1190px;
+}
+.ng-s-footer .ng-url-list{
+    height:25px;
+    line-height:25px;
+}
+.ng-s-footer p.ng-url-list a {
+    color: #666;
+}
+.ng-s-footer p.ng-url-list span {
+    color: #888;
+    padding: 0 8px;
+}
+.ng-s-footer p.ng-copyright{
+    line-height: 25px;
+    height: 25px;
+    color:#999;
+}
+.ng-s-footer p.ng-copyright span {
+    color: #888;
+    padding: 0 8px;
+}
+.gwab {
+    position: relative;
+    padding-left: 25px;
+}
+.gwab i {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background: url(../img/gwab-icon.png) no-repeat;
+}
+.ng-s-footer p.ng-copyright a {
+    color: #999;
+}
+/* ng-authentication */
+.ng-s-footer .ng-authentication {
+    width: 1190px;
+}
+.ng-s-footer .ng-authentication {
+    display: block;
+    float: left;
+    height: 25px;
+    margin-top: 5px;
+}
+.ng-s-footer .ng-authentication a {
+    display: inline-block;
+    margin-right: 8px;
+}
