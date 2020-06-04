@@ -1,0 +1,291 @@
+@charset "UTF-8";
+.header {
+  width: 970px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.header .logo {
+  float: left;
+  width: 189px;
+  height: 100%;
+  background: url(https://res.suning.cn/project/passport/login/b2c_V7/image/logo.png) center no-repeat;
+}
+
+.header .header-content {
+  margin-left: 189px;
+  padding: 37px 0 0 16px;
+}
+
+.header .bind-phone {
+  color: #333;
+  background: #fefff1;
+  border: 1px solid #fecd66;
+  padding: 4px 6px;
+  line-height: 16px;
+}
+
+.header .bind-phone a {
+  color: #f60;
+}
+
+.header .advise {
+  float: right;
+  margin-top: 8px;
+  /* 浮动元素会生成一个块级框(inline-block)，而不论它本身是何种元素。如果浮动非替换元素，则要指定一个明确的宽度；否则，它们会尽可能地窄。
+        注释：假如在一行之上只有极少的空间可供浮动元素，那么这个元素会跳至下一行，这个过程会持续到某一行拥有足够的空间为止。
+        绝对定位元素也会生成一个块级框，而不论原来是什么元素。
+        */
+}
+
+.header .advise i {
+  float: left;
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  font-size: 12px;
+  background: url(https://res.suning.cn/project/passport/login/b2c_V7/image/sprite.png?v=1541648459319) -67px -27px no-repeat;
+}
+
+.main {
+  min-width: 970px;
+  height: 570px;
+  background: url(https://image.suning.cn/uimg/cms/img/159117530347729965.jpg) no-repeat center;
+}
+
+.login-c {
+  width: 970px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.login-c .single-link {
+  width: 570px;
+  height: 100%;
+  float: left;
+}
+
+.login-form {
+  float: right;
+  width: 360px;
+  position: relative;
+  margin-top: 50px;
+  background: #fff;
+  box-shadow: 0 0 2px #ececec;
+  font-family: "Microsoft Yahei";
+}
+
+.login-form .login-tab {
+  height: 50px;
+  line-height: 20px;
+  font-size: 16px;
+  overflow: hidden;
+  border-bottom: 1px solid #eee;
+}
+
+.login-form .login-tab .tab-item {
+  float: left;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.login-form .login-tab .tab-item span {
+  display: block;
+  border-right: 1px solid #eee;
+  margin-top: 15px;
+}
+
+.login-form .login-tab .tab-item i {
+  display: none;
+  position: absolute;
+  width: 70px;
+  height: 4px;
+  background: #f60;
+  bottom: 1px;
+  left: 50%;
+  margin-left: -35px;
+}
+
+.login-form .login-tab .tab-item-on {
+  color: #f60;
+}
+
+.login-form .login-tab .tab-item-on i {
+  display: block;
+}
+
+.login-form .pc-login .username-login {
+  padding: 0 24px;
+}
+
+.login-form .pc-login .username-login .login-error {
+  padding: 2px 10px;
+  font-size: 12px;
+  color: #323232;
+  background: #fff0f0;
+  border: 1px solid #ff3c3c;
+  margin: 8px 0;
+}
+
+.login-form .pc-login .username-login .login-error i {
+  float: left;
+  margin: 1px 8px 0 0;
+  width: 16px;
+  height: 16px;
+  background: url(https://res.suning.cn/project/passport/login/b2c_V7/image/sprite.png?v=1541648459319) -161px -108px no-repeat;
+}
+
+.login-form .pc-login .username-login .username-box, .login-form .pc-login .username-login .password-box {
+  margin-bottom: 20px;
+}
+
+.login-form .pc-login .username-login .input-box {
+  position: relative;
+  border: 1px solid #ddd;
+  color: #999;
+  padding: 0 32px 0 36px;
+  height: 36px;
+  overflow: hidden;
+}
+
+.login-form .pc-login .username-login .input-box input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 36px;
+  padding: 0 32px 0 36px;
+  border: 0;
+  font-size: 14px;
+  margin-left: -36px;
+}
+
+.login-form .pc-login .username-login .input-box label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding-left: 36px;
+  line-height: 36px;
+  font-size: 14px;
+  cursor: text;
+  color: #ccc;
+  background: #fff;
+}
+
+.login-form .pc-login .username-login .input-box .icon {
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.login-form .pc-login .username-login .input-box .username-icon {
+  background: url(https://res.suning.cn/project/passport/login/b2c_V7/image/sprite.png?v=1541648459319) -123px -67px no-repeat;
+}
+
+.login-form .pc-login .username-login .input-box .password-icon {
+  background: url(https://res.suning.cn/project/passport/login/b2c_V7/image/sprite.png?v=1541648459319) 0px -108px no-repeat;
+}
+
+.login-form .pc-login .username-login .login-help {
+  padding-top: 10px;
+  height: 35px;
+  line-height: 35px;
+}
+
+.login-form .pc-login .username-login .login-help .login-switch {
+  float: left;
+}
+
+.login-form .pc-login .username-login .login-help .login-switch i {
+  display: inline-block;
+  width: 13px;
+  height: 16px;
+  margin-right: 5px;
+  vertical-align: -3px;
+  background: url(https://res.suning.cn/project/passport/login/b2c_V7/image/sprite.png?v=1541648459319) -21px -149px no-repeat;
+}
+
+.login-form .pc-login .username-login .login-help .forget-password {
+  float: right;
+}
+
+.login-form .pc-login .username-login .login-submit {
+  display: block;
+  width: 310px;
+  line-height: 40px;
+  margin: 0 auto;
+  background: #f60;
+  font-size: 20px;
+  border-radius: 2px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+
+.login-form .free-reg {
+  text-align: center;
+  padding: 12px 0 35px;
+}
+
+.login-form .free-reg a {
+  font-size: 12px;
+  color: #ff6600;
+}
+
+.login-form .bind-login {
+  width: 310px;
+  margin: 0 auto;
+  padding: 19px 0 17px;
+  border-top: 1px solid #ddd;
+  position: relative;
+}
+
+.login-form .bind-login .title {
+  width: 128px;
+  background: #fff;
+  text-align: center;
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  margin-left: -64px;
+  color: #999;
+}
+
+.login-form .bind-login .common a {
+  float: left;
+  padding: 0 7px;
+  border-right: 1px solid #dedcd5;
+  line-height: 16px;
+}
+
+.login-form .bind-login .common a i {
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+
+.login-form .bind-login .common .qq {
+  padding-left: 0;
+}
+
+.login-form .bind-login .common .qq i {
+  background: url(https://res.suning.cn/project/passport/login/b2c_V7/image/sprite.png?v=1541648459319) -140px -108px no-repeat;
+}
+
+.login-form .bind-login .common .weixin i {
+  background: url(https://res.suning.cn/project/passport/login/b2c_V7/image/sprite.png?v=1541648459319) -90px -27px no-repeat;
+}
+
+.login-form .bind-login .common .yifubao i {
+  background: url(https://res.suning.cn/project/passport/login/b2c_V7/image/sprite.png?v=1541648459319) -119px -108px no-repeat;
+}
+
+.login-form .bind-login .common .weibo i {
+  background: url(https://res.suning.cn/project/passport/login/b2c_V7/image/sprite.png?v=1541648459319) 0px -149px no-repeat;
+}

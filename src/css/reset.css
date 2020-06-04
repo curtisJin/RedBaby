@@ -32,8 +32,8 @@ input{
     outline:none;
     display:block;
 }
-.clear-fix{
-    content:'\20';
+.clear-fix::after{
+    content:'.';
     clear:both;
     display:block;
     height:0;
