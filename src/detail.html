@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/detail.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js"></script>
+</head>
+<body>
+    <div class="ng-toolbar">
+        <div class="ng-toolbar-con wrapper">
+            <div class="ng-toolbar-left">
+                <a href="//www.suning.com" class="ng-bar-node ng-bar-node-backhome" id="ng-bar-node-backhome">
+                    <i class="ng-iconfont ng-backhome"></i>
+                    <span>返回首页</span>
+                </a>
+                <div class="ng-bar-node-box ng-site-nav-box lazy-bar-box">
+                    <a href="javascript:void(0);" class="ng-bar-node ng-bar-node-site">
+                        <span>网站导航</span>
+                        <em class="ng-iconfont down"></em>
+                    </a>
+                    <div class="ng-sn-site-nav ng-d-box site-nav-child" style="display:none;">
+                    </div>
+                    <div class="ng-bar-node-box shop-handle lazy-bar-box">
+                        <a href="https://sop.suning.com"
+                            class="ng-bar-node ng-bar-node-pr5  ng-bar-node-shop touch-href">
+                            <span>商家入驻</span>
+                            <em class="ng-iconfont down"></em>
+                        </a>
+                    </div>
+                    <div class="ng-bar-node-box service-handle lazy-bar-box">
+                        <a href="javascript:void(0);"
+                            class="ng-bar-node ng-bar-node-service ng-bar-node-fix touch-href ng-bar-node-pr5"
+                            rel="nofollow" name="public0_none_kehu_fuwu">
+                            <span>客户服务</span>
+                            <em class="ng-iconfont down"></em>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="ng-toolbar-right">
+                <!-- 登录注册 -->
+                <div class="ng-bar-node reg-bar-node" id="reg-bar-node">
+                    <a href="javascript:SFE.base.logonurl();" class="login">请登录</a>
+                    <a href="#" class="login reg-bbb">注册有礼</a>
+                </div>
+                <!-- 我的订单 -->
+                <div class="ng-bar-node-box myorder-handle" >
+                    <a href="#" rel="nofollow" class="ng-bar-node ng-bar-node-fix touch-href ng-bar-node-pr5">
+                        <span>我的订单</span>
+                        <em class="ng-iconfont down"></em>
+                    </a>
+                </div>
+                <!-- 我的易购 -->
+                <div class="ng-bar-node-box mysuning-handle" >
+                    <a href="//my.suning.com" rel="nofollow" name="public0_none_wode_yigou"
+                        class="ng-bar-node ng-bar-node-fix touch-href ng-bar-node-pr5">
+                        <span>我的易购</span>
+                        <em class="ng-iconfont down"></em>
+                    </a>
+                </div>
+                <!-- 苏宁会员 -->
+                <a href="//vip.suning.com/" class="ng-bar-node ng-bar-node-pr5">
+                    <span>苏宁会员</span>
+                </a>
+                <!-- 购物车 -->
+                <div class="ng-bar-node-box cart-handle"  >
+                    <a class="ng-bar-node ng-bar-node-mini-cart " href="//shopping.suning.com/cart.do">
+                        <em class="ng-iconfont cart"></em><span>购物车</span>
+                        <span class=" total-num-box" id="J_total_num_box">
+                            <b class="total-num J_cart_total_num" id="showTotalQty">0</b>
+                            <span class="total-num-bg-box">
+                                <em></em>
+                                <i></i>
+                            </span>
+                            </span>
+                            <em class="ng-iconfont down"></em>
+                    </a>
+                </div>
+                <!-- 易付宝 -->
+                <a href="https://passport.suning.com/ids/trustLogin?sysCode=epp&amp;agentType=pc&amp;targetUrl=https://pay.suning.com/epp-epw/login/login.action"
+                    class="ng-bar-node ng-bar-node-pr5">
+                    <span>易付宝</span>
+                </a>
+                <!-- 企业采购 -->
+                <a href="//b.suning.com/" class="ng-bar-node ng-bar-node-pr5">
+                    <span>企业采购</span>
+                </a>
+                <!-- 手机苏宁 -->
+                <div class="ng-bar-node-box app-down-box"  >
+                    <a href="//cuxiao.suning.com/newUser.html" class="ng-bar-node mb-suning touch-href">
+                        <span>手机苏宁</span>
+                        <em class="ng-iconfont down"></em>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper proinfo">
+        <div class="proinfo-container clear-fix">
+            <div class="proinfo-left">
+                <div class="imgzoom" id="imgZoom">
+                    <div class="imgzoom-main">
+                        <!-- 6.18活动专属边框 -->
+                        <div class="imgzoom-main-cover"></div>
+                        <!-- 放大前的图片 -->
+                        <a href="#" class="img-view" id="bigImg">
+                            <img src="https://imgservice.suning.cn/uimg1/b2c/image/gOj_y_-xbUKCCLNUzpQx-g.jpg_800w_800h_4e" alt="">
+                        </a>
+                        <!-- 放大镜 -->
+                        <div class="imgzoom-glass"></div>
+                        <!-- 弹出的放大图片 -->
+                        <div class="imgzoom-pop" style="display: none;">
+                            <img src="https://imgservice.suning.cn/uimg1/b2c/image/gOj_y_-xbUKCCLNUzpQx-g.jpg_800w_800h_4e" alt="">
+                        </div>
+                    </div>
+                    <!-- 放大镜下面的小图 -->
+                    <div class="imgzoom-thumb clear-fix">
+                        <div class="imgzoom-thumb-main">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <img src="https://imgservice.suning.cn/uimg1/b2c/image/q5lGXAt9U76T9UOv2u_kCA.jpg_60w_60h_4e" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="https://imgservice.suning.cn/uimg1/b2c/image/v-_OPbvJsyOYs0FG1c8bMQ.jpg_60w_60h_4e" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="https://imgservice.suning.cn/uimg1/b2c/image/q5lGXAt9U76T9UOv2u_kCA.jpg_60w_60h_4e" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="https://imgservice.suning.cn/uimg1/b2c/image/RS-8SzGXUFqq2NJk9QArWA.jpg_60w_60h_4e" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="https://imgservice.suning.cn/uimg1/b2c/image/gOj_y_-xbUKCCLNUzpQx-g.jpg_60w_60h_4e" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 关注收藏和分享 -->
+                    <div class="imgzoom-share">
+                        <div class="z-item compare"><i></i>对比</div>
+                        <div class="z-item share"><i></i>对比</div>
+                        <div class="z-item focus"><i></i>对比</div>
+                    </div>
+                </div>
+            </div>
+            <div class="proinfo-main">
+                <div class="proinfo-title">
+                    <h1 id="itemDisplayName">
+                        <span class="zy" id="itemNameZy">自营</span>
+                        贝斯美Bestme婴幼儿菠菜面条240g/盒（30g*8包） 宝宝面条辅食 6个月以上适用
+                    </h1>
+                    <h2 id="promotionDesc"">精选澳洲进口小麦，添加多种营养素，煮后面条柔软&nbsp;&nbsp;</h2>
+                </div>
+                <div class="proinfo-price clear-fix" id="priceDom">
+                    <div class="price-container">
+                        <dl class="price-promo">
+                            <dt>
+                                <span>易购价</span>
+                            </dt>
+                            <dd>
+                                <span class="mainprice"><i>¥</i>38.<span>80</span></span>
+                                <a href="#" class="btn-price-notice" >降价通知</a>
+                            </dd>
+                        </dl>
+                        <dl class="super-vipbox">
+                            <dd id="superYz">
+                                <span class="super-vip-icon"></span>
+                                <span class="super-word">加入会员返云钻，下单立返约0.38元</span>
+                                <a href="#" class="more-equity" >立即开通&gt;</a>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
