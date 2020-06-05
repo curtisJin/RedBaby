@@ -1,0 +1,194 @@
+@charset "utf-8";
+.my-cart{
+    min-width:1190px;
+    margin:0 auto;
+    width:1190px;
+    color:#666;
+    margin-top:20px;
+}
+.head-plate{
+    margin-bottom:23px;
+}
+.head-inner{
+    height:32px;
+    border:1px solid #ddd;
+    .Srow{
+        float:left;
+        height:32px;
+        line-height:32px;
+    }
+    .all-check{
+        width:250px;
+        input{
+            float:left;
+            display:inline-block;
+            width:15px;
+            height:15px;
+            margin:10px 10px 0;
+        }
+    }
+    .goods-info{
+        width:218px;
+    }
+    .standard{
+        width:145px;
+    }
+    .u-price{
+        width:153px;
+    }
+    .count{
+        width:130px;
+    }
+    .node{
+        width:175px;
+        padding-left:15px;
+    }
+    .operate{
+        width:100px;
+    }
+}
+
+//商品列表
+.cargo-info{
+    background:#fff;
+    margin-bottom:30px;
+    .cargo{
+        border:1px solid #dfdfdf;      
+    }
+}
+.item{
+    background:#fffbf2;
+    padding:15px 20px;
+    // 各部分公共样式
+    .ic{
+        float:left;
+        height:80px;
+    }
+    // 单个部分样式
+    .ic-check{
+        width:47px;
+        position:relative;
+        input{
+            position:absolute;
+            top:30%;
+            transform:0 50%;
+            display:inline-block;
+            width:15px;
+            height:15px;
+        }
+    }
+    //商品简介信息  
+    .ic-cargo{
+        width:392px;
+        .cargo-pic{
+            width:80px;
+            height:80px;
+            float:left;
+            margin-right:15px;
+            background:#fff;
+            overflow:hidden;
+        }
+        .cargo-img-box{
+            display:block;
+            width:78px;
+            height:78px;
+            border:1px solid #eee;
+            overflow: hidden;
+            img{
+                display:block;
+                width:80px;
+                height:80px;
+                margin:-1px 0 0 -1px;
+            }
+        }
+        //简介
+        .cargo-intro{
+            width:239px;
+            float:left;
+            .cargo-title{
+                display:block;
+                margin-bottom:2px;
+                line-height:18px;
+                max-height:72px;
+                color:#333;
+                word-break:break-all;
+                overflow:hidden;
+            }
+        }
+    }
+    //规格
+    .ic-str{
+        width:103px;
+    }
+    //单价
+    .ic-uprice{
+        width:106px;
+        .uprice{
+            text-align:right;
+        }
+        i{
+            font-family:Arial;
+        }
+    }
+    //数量
+    .ic-count{
+        width:177px;
+        .item-count{
+            padding-left:76px;
+            width:70px;
+            height:22px;
+            a{
+                float:left;
+                display: block;
+                width:22px;
+                height:22px;
+                background-color: #f1f1f1;
+                background:url(../img/lion-cart.png) no-repeat;
+            }
+            .min-count{
+                background-position:-87px -24px;
+                cursor:no-drop;
+            }
+            /* .minus{
+                background-position:-87px 0px;
+            } */
+            .plus{
+                background-position:-111px 0px;
+            }
+            /* .max-count{
+                background-position:-111px -24px;
+            } */
+            //输入购买数量
+            .text-count{
+                float:left;
+                width:26px;
+                height:20px;
+                border:1px solid #ccc;
+                border-width:1px 0;
+                text-align:center;
+            }
+        }
+    }
+    //小记
+    .ic-node{
+        width:126px;
+        text-align:right;
+        .nd-price{
+            i{
+                font-family:Arial;
+            }
+        }
+    }
+    //操作
+    .ic-operate{
+        width:58px;
+        padding-left:115px;
+        position:relative;
+        .ic-del{
+            color:#666;
+            position:absolute;
+            top:30%;
+            transition:0 -50%;
+        }
+    }
+}

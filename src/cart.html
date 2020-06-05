@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="苏宁易购">
+    <meta name="description" content="苏宁易购是国内领先的综合购物商城">
+    <title>我的购物车-苏宁易购</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/cart.css">
+    <!-- <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js"></script> -->
+</head>
+
+<body>
+    <div class="ng-toolbar">
+        <div class="ng-toolbar-con wrapper">
+            <div class="ng-toolbar-left">
+                <a href="//www.suning.com" class="ng-bar-node ng-bar-node-backhome" id="ng-bar-node-backhome">
+                    <i class="ng-iconfont ng-backhome"></i>
+                    <span>返回首页</span>
+                </a>
+                <div class="ng-bar-node-box ng-site-nav-box lazy-bar-box">
+                    <a href="javascript:void(0);" class="ng-bar-node ng-bar-node-site">
+                        <span>网站导航</span>
+                        <em class="ng-iconfont down"></em>
+                    </a>
+                    <div class="ng-sn-site-nav ng-d-box site-nav-child" style="display:none;">
+                    </div>
+                    <div class="ng-bar-node-box shop-handle lazy-bar-box">
+                        <a href="https://sop.suning.com"
+                            class="ng-bar-node ng-bar-node-pr5  ng-bar-node-shop touch-href">
+                            <span>商家入驻</span>
+                            <em class="ng-iconfont down"></em>
+                        </a>
+                    </div>
+                    <div class="ng-bar-node-box service-handle lazy-bar-box">
+                        <a href="javascript:void(0);"
+                            class="ng-bar-node ng-bar-node-service ng-bar-node-fix touch-href ng-bar-node-pr5"
+                            rel="nofollow" name="public0_none_kehu_fuwu">
+                            <span>客户服务</span>
+                            <em class="ng-iconfont down"></em>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="ng-toolbar-right">
+                <!-- 登录注册 -->
+                <div class="ng-bar-node reg-bar-node" id="reg-bar-node">
+                    <a href="javascript:SFE.base.logonurl();" class="login">请登录</a>
+                    <a href="#" class="login reg-bbb">注册有礼</a>
+                </div>
+                <!-- 我的订单 -->
+                <div class="ng-bar-node-box myorder-handle">
+                    <a href="#" rel="nofollow" class="ng-bar-node ng-bar-node-fix touch-href ng-bar-node-pr5">
+                        <span>我的订单</span>
+                        <em class="ng-iconfont down"></em>
+                    </a>
+                </div>
+                <!-- 我的易购 -->
+                <div class="ng-bar-node-box mysuning-handle">
+                    <a href="//my.suning.com" rel="nofollow" name="public0_none_wode_yigou"
+                        class="ng-bar-node ng-bar-node-fix touch-href ng-bar-node-pr5">
+                        <span>我的易购</span>
+                        <em class="ng-iconfont down"></em>
+                    </a>
+                </div>
+                <!-- 苏宁会员 -->
+                <a href="//vip.suning.com/" class="ng-bar-node ng-bar-node-pr5">
+                    <span>苏宁会员</span>
+                </a>
+                <!-- 购物车 -->
+                <div class="ng-bar-node-box cart-handle">
+                    <a class="ng-bar-node ng-bar-node-mini-cart " href="//shopping.suning.com/cart.do">
+                        <em class="ng-iconfont cart"></em><span>购物车</span>
+                        <span class=" total-num-box" id="J_total_num_box">
+                            <b class="total-num J_cart_total_num" id="showTotalQty">0</b>
+                            <span class="total-num-bg-box">
+                                <em></em>
+                                <i></i>
+                            </span>
+                        </span>
+                        <em class="ng-iconfont down"></em>
+                    </a>
+                </div>
+                <!-- 易付宝 -->
+                <a href="https://passport.suning.com/ids/trustLogin?sysCode=epp&amp;agentType=pc&amp;targetUrl=https://pay.suning.com/epp-epw/login/login.action"
+                    class="ng-bar-node ng-bar-node-pr5">
+                    <span>易付宝</span>
+                </a>
+                <!-- 企业采购 -->
+                <a href="//b.suning.com/" class="ng-bar-node ng-bar-node-pr5">
+                    <span>企业采购</span>
+                </a>
+                <!-- 手机苏宁 -->
+                <div class="ng-bar-node-box app-down-box">
+                    <a href="//cuxiao.suning.com/newUser.html" class="ng-bar-node mb-suning touch-href">
+                        <span>手机苏宁</span>
+                        <em class="ng-iconfont down"></em>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="my-cart">
+        <div class="my-cart-head">
+            <!-- 头部板块 -->
+            <div class="head-plate">
+                <div class="head-inner">
+                    <div class="Srow all-check">
+                        <input type="checkbox" checked="checked">全选
+                    </div>
+                    <div class="Srow goods-info">商品信息</div>
+                    <div class="Srow standard">规格</div>
+                    <div class="Srow u-price">单价(元)</div>
+                    <div class="Srow count">数量</div>
+                    <div class="Srow node">小记</div>
+                    <div class="Srow operate">操作</div>
+                </div>
+            </div>
+        </div>
+        <!-- 商品列表 -->
+        <div class="my-cart-list">
+            <div class="cargo-info">
+                <div class="cargo">
+                    <!-- 每一条商品 -->
+                    <div class="item item-checked clear-fix">
+                        <!-- 单个商品选择框 -->
+                        <div class="ic ic-check">
+                            <input type="checkbox" checked="checked">
+                        </div>
+                        <!-- 商品简介 -->
+                        <div class="ic ic-cargo">
+                            <div class="cargo-pic">
+                                <a href="#" class="cargo-img-box">
+                                    <img src="https://imgservice.suning.cn/uimg1/b2c/image/M-Q9FIQVfPpI0PiRb1niGA.jpg_100w_100h_4e" alt="">
+                                </a>
+                            </div>
+                            <!-- 简介 -->
+                            <div class="cargo-intro">
+                                <a href="#" class="cargo-title">【苏宁补贴30元】诺优能Nutrilon3段800克(12-36个月)幼儿配方奶粉原装进口中文版新包装</a>
+                            </div>
+                        </div>
+                        <!-- 规格 -->
+                        <div class="ic ic-str">
+                            规格
+                        </div>
+                        <!-- 单价 -->
+                        <div class="ic ic-uprice">
+                            <div class="uprice">
+                                <span class="uprice-now">
+                                    <i>¥</i>
+                                    <em>130.00</em>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- 数量 -->
+                        <div class="ic ic-count">
+                            <div class="item-count">
+                                <a href="#" class="minus min-count"></a>
+                                <input type="text" class="text-count" data-min="1" data-max="99" value="1">
+                                <a href="" class="plus max-count"></a>
+                            </div>
+                        </div>
+                        <!-- 小记 -->
+                        <div class="ic ic-node">
+                            <b class="nd-price">
+                                <i>¥</i>
+                                <em>39.00</em>
+                            </b>
+                        </div>
+                        <div class="ic ic-operate">
+                            <a href="#" class="ic-del">删除</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
