@@ -192,3 +192,93 @@
         }
     }
 }
+
+//结算工具条
+.cart-toolbar{
+    width:1188px;
+    border:1px solid #ddd;
+    height:58px;
+    line-height:58px;
+    .ct-left{
+        float:left;
+            .ct-checkall{
+                display:inline-block;
+                margin:0 10px;
+                width:15px;
+                height:15px;
+            }
+            .del-check{
+                margin-left:20px;
+                color:#666;
+            }
+    }
+    .ct-right{
+        float:right;
+        .ct-collect,.settle-accounts{
+            float:left;
+        }
+    }
+    .ct-total-price{
+        float:right;
+        line-height:22px;
+        .ctt-split{
+            float:left;
+            height:38px;
+            width:1px;
+            margin:12px 16px 0 0;
+            background-color: #ddd;
+            font-size:0;
+        }
+    }
+    .ct-sum-price{
+        float:left;
+        margin-top:20px;
+        .sum-text{
+            display: inline-block;
+        }
+        .sum-num{
+            display: inline-block;
+            vertical-align: middle;
+            font-weight:bold;
+            color:#f60;
+            i{
+                font-family:Arial;
+            }
+            em{
+                font-size:22px;
+            }
+        }
+    }
+
+    // 选中商品数量
+    .ct-goods-num{
+        float:right;
+        text-align:center;
+        margin-top: 2px;
+        margin-right:20px;
+        .ctgNum{
+            color:#f60;
+            font-size:14px;
+            font-weight:600;
+        }
+    }
+
+    //计算按钮
+    .settle-accounts{
+        padding-left:15px;
+        .sa-btn{
+            display:block;
+            width:120px;
+            height:60px;
+            text-align:center;
+            background:#f60;
+            margin-top:-1px;
+            margin-left:-1px;
+            color:#fff;
+            font-size:18px;
+            font-weight:600;
+            font-family:"Microsoft Yahei";
+            border-radius:3px;
+        }
+    }
+}
