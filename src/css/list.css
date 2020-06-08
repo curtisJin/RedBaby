@@ -73,7 +73,7 @@
 .price-range {
   padding: 0 7px;
   height: 100%;
-  width: 124px;
+  width: 145px;
   float: left;
 }
 
@@ -247,7 +247,7 @@
 
 .proOpt .num-select .goodsNum {
   float: left;
-  width: 56px;
+  width: 45px;
   height: 28px;
   line-height: 28px;
   text-align: center;

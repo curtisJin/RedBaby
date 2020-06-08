@@ -85,6 +85,7 @@ a{
 .ng-toolbar .ng-toolbar-con{
     width:1190px;
     margin:0 auto;
+    padding:0!important;
 }
 
 /* ng-toolbar-left */
@@ -375,7 +376,9 @@ a{
     font-weight:700;
 }
 /* 商品分类列表 */
-
+.ng-sort-list-box{
+    z-index:199;
+}
 .ng-sort-list-box, .ng-sort-list-box .nav-cover {
     height: 482px;
     position: absolute;
