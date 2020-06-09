@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/cart.css">
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script src="thirdplugins/jquery.cookie.js"></script>
 </head>
 
 <body>
@@ -109,7 +110,7 @@
             <div class="head-plate">
                 <div class="head-inner">
                     <div class="Srow all-check">
-                        <input type="checkbox" checked="checked">全选
+                        <input type="checkbox" class="allchecked">全选
                     </div>
                     <div class="Srow goods-info">商品信息</div>
                     <div class="Srow standard">规格</div>
@@ -123,23 +124,23 @@
         <!-- 商品列表 -->
         <div class="my-cart-list">
             <div class="cargo-info">
-                <div class="cargo">
+                <div class="cargo" style="display:none;">
                     <!-- 每一条商品 -->
                     <div class="item item-checked clear-fix">
                         <!-- 单个商品选择框 -->
                         <div class="ic ic-check">
-                            <input type="checkbox" checked="checked">
+                            <input type="checkbox">
                         </div>
                         <!-- 商品简介 -->
                         <div class="ic ic-cargo">
                             <div class="cargo-pic">
                                 <a href="#" class="cargo-img-box">
-                                    <img src="#">
+                                    <img src="">
                                 </a>
                             </div>
                             <!-- 简介 -->
                             <div class="cargo-intro">
-                                <a href="#" class="cargo-title">【苏宁补贴30元】诺优能Nutrilon3段800克(12-36个月)幼儿配方奶粉原装进口中文版新包装</a>
+                                <a href="#" class="cargo-title"></a>
                             </div>
                         </div>
                         <!-- 规格 -->
@@ -151,7 +152,7 @@
                             <div class="uprice">
                                 <span class="uprice-now">
                                     <i>¥</i>
-                                    <em>130.00</em>
+                                    <em></em>
                                 </span>
                             </div>
                         </div>
@@ -167,7 +168,7 @@
                         <div class="ic ic-node">
                             <b class="nd-price">
                                 <i>¥</i>
-                                <em>39.00</em>
+                                <em></em>
                             </b>
                         </div>
                         <div class="ic ic-operate">
@@ -186,7 +187,7 @@
                     <!-- <div class="ct-checkall">
                         <input type="checkbox" class="ctCheck" checked>全选
                     </div> -->
-                    <input type="checkbox" checked class="ct-checkall">全选
+                    <input type="checkbox" class="ct-checkall allchecked">全选
                     <a href="#" class="del-check">删除选中商品</a>
                 </div>
                 <!-- 右侧 -->
@@ -200,13 +201,13 @@
                                 <p class="sum-text">总价(含运费):</p>
                                 <p class="sum-num">
                                     <i>¥</i>
-                                    <em>1122.00</em>
+                                    <em></em>
                                 </p>
                             </div>
                         </div>
                         <!-- 选中商品数量 -->
                         <div class="ct-goods-num">
-                            已选商品<b class="ctgNum">22</b>件
+                            已选商品<b class="ctgNum"></b>件
                         </div>
                     </div>
                     <!-- 结算按钮 -->
@@ -217,6 +218,7 @@
             </div>
         </div>
     </div>
+    <script src="./script/cart.js"></script>
 </body>
 
 </html>

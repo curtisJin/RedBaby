@@ -74,6 +74,7 @@ body, a {
   background: url(../img/loading.gif) no-repeat center;
   background-size: 18px 18px;
   overflow: hidden;
+  z-index: 77;
 }
 
 .wrapper .imgzoom .imgzoom-pop img {
@@ -159,7 +160,7 @@ body, a {
   margin-left: 400px;
   padding: 0 210px 0 10px;
   min-height: 520px;
-  z-index: 4;
+  z-index: 0;
 }
 
 .wrapper .proinfo-main dl dd {
@@ -529,6 +530,14 @@ body, a {
   background: url(../img/f-icons-ex1.png) -1026px -712px;
 }
 
+.buynum dl .notminus {
+  background: url(../img/f-icons-ex1.png) -1026px -792px;
+}
+
+.buynum dl .maxplus {
+  background: url(../img/f-icons-ex1.png) -891px -696px;
+}
+
 .buynum dl input {
   float: left;
   width: 25px;
@@ -633,4 +642,76 @@ body, a {
 
 .proinfo-serv .wlyth i {
   background: url(../img/qtwlyth.png);
+}
+
+.tips {
+  width: 448px;
+  height: 200px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -224px;
+  margin-top: -100px;
+  z-index: 8000;
+}
+
+.tips .tips-container {
+  padding: 6px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.tips .tips-title {
+  border: 1px solid #ccc;
+  background: #eee;
+  position: relative;
+}
+
+.tips .tips-title h3 {
+  padding: 5px 0;
+  padding-left: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.tips .tips-title .tips-close {
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: url(../img/f-icons-ex1.png) no-repeat -993px -927px;
+  position: absolute;
+  top: 6px;
+  right: 8px;
+}
+
+.tips .tips-content {
+  padding: 40px 18px  39px 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.tips .tips-content .tips-succ {
+  float: left;
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-top: 4px;
+  margin-right: 9px;
+  background: url(../img/f-icons-ex1.png) no-repeat -758px -944px;
+}
+
+.tips .tips-content span {
+  float: left;
+  font: 700 14px/32px 'Microsoft YaHei';
+}
+
+.tips .tips-content .tips-gocart {
+  float: right;
+  width: 120px;
+  height: 32px;
+  line-height: 32px;
+  color: #fff;
+  font-family: 'Microsoft YaHei';
+  font-size: 14px;
+  text-align: center;
+  background: #f50;
+  border-radius: 2px;
 }

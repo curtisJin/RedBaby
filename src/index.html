@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/index.css">
-    <!-- <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js"></script> -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="./thirdplugins/jquery.lazyload.js"></script>
 </head>
 <body class="root1200">
     <div id="Top-banner" class="ng-top-banner">
@@ -24,7 +25,7 @@
         </a>
     </div>
     <div class="ng-toolbar">
-        <div class="ng-toolbar-con wrapper">
+        <div class="ng-toolbar-con wrapper clear-fix">
             <div class="ng-toolbar-left">
                 <a href="//www.suning.com" class="ng-bar-node ng-bar-node-backhome" id="ng-bar-node-backhome">
                     <i class="ng-iconfont ng-backhome"></i>
@@ -339,7 +340,7 @@
             $(this).hide();
         });
     </script>
-    <div class="wrapper sp-nav">
+    <div class="wrapper sp-nav" style="padding-top:0;">
         <ul>
             <li class="now">
                 <a href="https://kid.pptv.com/index.html" >少儿动画</a>
@@ -359,6 +360,7 @@
     <div class="home-screen">
         <!-- 首屏目录 -->
         <div class="hs-catalog">
+            <!-- 一级目录 -->
             <div class="catalog-item">
                 <i class="ci-arrow">></i>
                 <dl>
@@ -475,6 +477,7 @@
                     </dd>
                 </dl>
             </div>
+            <!-- 二级目录 -->
             <div class="catalog-second-item" style="top:0;display:none;">
                 <a href="#" class="csi-close"></a>
                 <div class="csi-column">
@@ -485,7 +488,7 @@
                         <dd>
                             <span>
                                 <i></i>
-                                <a href="#">奶粉</a>
+                                <a href="./list.html">奶粉</a>
                             </span>
                             <span>
                                 <i></i>
@@ -1680,7 +1683,7 @@
                     </dl>
                 </div>
             </div>
-            <div class="catalog-second-item" style="bottom:168px;display:none;">
+            <div class="catalog-second-item" style="bottom:0px;display:none;">
                 <a href="#" class="csi-close"></a>
                 <div class="csi-column">
                     <dl>
@@ -1921,7 +1924,7 @@
                     </dl>
                 </div>
             </div>
-            <div class="catalog-second-item" style="bottom:56px;display:none;">
+            <div class="catalog-second-item" style="bottom:0px;display:none;">
                 <a href="#" class="csi-close"></a>
                 <div class="csi-column">
                     <dl>
@@ -2430,23 +2433,23 @@
                 </li>
             </ul>
             <!-- 前进箭头 -->
-            <a href="#" class="hs-banner-arr pre">
+            <a href="#" class="hs-banner-arr pre" style="display: none;">
                 <!-- 箭头背景颜色 -->
                 <span class="arr-bck"></span>
                 <i class="arrow"></i>
             </a>
             <!-- 后退箭头 -->
-            <a href="#" class="hs-banner-arr next">
+            <a href="#" class="hs-banner-arr next" style="display: none;">
                 <span class="arr-bck"></span>
                 <i class="arrow"></i>
             </a>
             <!-- 切换圆点 -->
             <div class="banner-dot">
                 <ul class="bd-page">
+                    <li  class="bd-now"></li>
                     <li></li>
                     <li></li>
                     <li></li>
-                    <li class="bd-now"></li>
                 </ul>
             </div>
         </div>
@@ -2514,158 +2517,9 @@
                 <h4>Selected</h4>
             </div>
             <div class="hr-content">
+                <!-- <script src="./script/index.js"></script> -->
                 <ul class="clear-fix">
-                    <li class="hrc-item hrc-big">
-                        <!-- 商品图片 -->
-                        <img src="https://image5.suning.cn/uimg/cms/img/153129406372385953.jpg" alt="">
-                        <!-- 点击跳转商品详情页 -->
-                        <a href="#"></a>
-                        <!-- 商品简介 -->
-                        <div class="hrc-detail">
-                            <!-- 产品介绍 -->
-                            <span class="hrcd-intro">惠氏（Wyeth illuma）启赋3段奶粉 爱尔兰进口 12-36月幼儿配方 900克（罐装）</span>
-                            <!-- 商品价格 -->
-                            <div class="hrcd-price">
-                                <b>暂无报价</b>
-                            </div>
-                        </div>
-                        <span class="hrc-addcart"></span>
-                    </li>
-                    <li class="hrc-item">
-                        <img src="https://image1.suning.cn/uimg/cms/img/158434213977895701.jpg" alt="">
-                        <a href="#"></a>
-                        <div class="hrc-detail">
-                            <span class="hrcd-intro">贝因美HELLOKITTY 薄柔瞬吸干爽婴儿纸尿裤L码40片 倍柔亲肤大号尿不湿L 尿片</span>
-                            <div class="hrcd-price">
-                                <b>
-                                    <i>¥</i>
-                                    <span>148</span>
-                                    <em>.00</em>
-                                </b>
-                            </div>
-                        </div>
-                        <span class="hrc-addcart"></span>
-                    </li>
-                    <li class="hrc-item">
-                        <img src="https://image1.suning.cn/uimg/cms/img/158434213977895701.jpg" alt="">
-                        <a href="#"></a>
-                        <div class="hrc-detail">
-                            <span class="hrcd-intro">贝因美HELLOKITTY 薄柔瞬吸干爽婴儿纸尿裤L码40片 倍柔亲肤大号尿不湿L 尿片</span>
-                            <div class="hrcd-price">
-                                <b>
-                                    <i>¥</i>
-                                    <span>148</span>
-                                    <em>.00</em>
-                                </b>
-                            </div>
-                        </div>
-                        <span class="hrc-addcart"></span>
-                    </li>
-                    <li class="hrc-item">
-                        <img src="https://image1.suning.cn/uimg/cms/img/158434213977895701.jpg" alt="">
-                        <a href="#"></a>
-                        <div class="hrc-detail">
-                            <span class="hrcd-intro">贝因美HELLOKITTY 薄柔瞬吸干爽婴儿纸尿裤L码40片 倍柔亲肤大号尿不湿L 尿片</span>
-                            <div class="hrcd-price">
-                                <b>
-                                    <i>¥</i>
-                                    <span>148</span>
-                                    <em>.00</em>
-                                </b>
-                            </div>
-                        </div>
-                        <span class="hrc-addcart"></span>
-                    </li>
-                    <li class="hrc-item">
-                        <img src="https://image1.suning.cn/uimg/cms/img/158434213977895701.jpg" alt="">
-                        <a href="#"></a>
-                        <div class="hrc-detail">
-                            <span class="hrcd-intro">贝因美HELLOKITTY 薄柔瞬吸干爽婴儿纸尿裤L码40片 倍柔亲肤大号尿不湿L 尿片</span>
-                            <div class="hrcd-price">
-                                <b>
-                                    <i>¥</i>
-                                    <span>148</span>
-                                    <em>.00</em>
-                                </b>
-                            </div>
-                        </div>
-                        <span class="hrc-addcart"></span>
-                    </li>
-                    <li class="hrc-item">
-                        <img src="https://image1.suning.cn/uimg/cms/img/158434213977895701.jpg" alt="">
-                        <a href="#"></a>
-                        <div class="hrc-detail">
-                            <span class="hrcd-intro">贝因美HELLOKITTY 薄柔瞬吸干爽婴儿纸尿裤L码40片 倍柔亲肤大号尿不湿L 尿片</span>
-                            <div class="hrcd-price">
-                                <b>
-                                    <i>¥</i>
-                                    <span>148</span>
-                                    <em>.00</em>
-                                </b>
-                            </div>
-                        </div>
-                        <span class="hrc-addcart"></span>
-                    </li>
-                    <li class="hrc-item">
-                        <img src="https://image1.suning.cn/uimg/cms/img/158434213977895701.jpg" alt="">
-                        <a href="#"></a>
-                        <div class="hrc-detail">
-                            <span class="hrcd-intro">贝因美HELLOKITTY 薄柔瞬吸干爽婴儿纸尿裤L码40片 倍柔亲肤大号尿不湿L 尿片</span>
-                            <div class="hrcd-price">
-                                <b>
-                                    <i>¥</i>
-                                    <span>148</span>
-                                    <em>.00</em>
-                                </b>
-                            </div>
-                        </div>
-                        <span class="hrc-addcart"></span>
-                    </li>
-                    <li class="hrc-item">
-                        <img src="https://image1.suning.cn/uimg/cms/img/158434213977895701.jpg" alt="">
-                        <a href="#"></a>
-                        <div class="hrc-detail">
-                            <span class="hrcd-intro">贝因美HELLOKITTY 薄柔瞬吸干爽婴儿纸尿裤L码40片 倍柔亲肤大号尿不湿L 尿片</span>
-                            <div class="hrcd-price">
-                                <b>
-                                    <i>¥</i>
-                                    <span>148</span>
-                                    <em>.00</em>
-                                </b>
-                            </div>
-                        </div>
-                        <span class="hrc-addcart"></span>
-                    </li>
-                    <li class="hrc-item">
-                        <img src="https://image1.suning.cn/uimg/cms/img/158434213977895701.jpg" alt="">
-                        <a href="#"></a>
-                        <div class="hrc-detail">
-                            <span class="hrcd-intro">贝因美HELLOKITTY 薄柔瞬吸干爽婴儿纸尿裤L码40片 倍柔亲肤大号尿不湿L 尿片</span>
-                            <div class="hrcd-price">
-                                <b>
-                                    <i>¥</i>
-                                    <span>148</span>
-                                    <em>.00</em>
-                                </b>
-                            </div>
-                        </div>
-                        <span class="hrc-addcart"></span>
-                    </li>
-                    <li class="hrc-item">
-                        <img src="https://image1.suning.cn/uimg/cms/img/158434213977895701.jpg" alt="">
-                        <a href="#"></a>
-                        <div class="hrc-detail">
-                            <span class="hrcd-intro">贝因美HELLOKITTY 薄柔瞬吸干爽婴儿纸尿裤L码40片 倍柔亲肤大号尿不湿L 尿片</span>
-                            <div class="hrcd-price">
-                                <b>
-                                    <i>¥</i>
-                                    <span>148</span>
-                                    <em>.00</em>
-                                </b>
-                            </div>
-                        </div>
-                        <span class="hrc-addcart"></span>
-                    </li>
+                   
                 </ul>
             </div>
         </div>
@@ -3094,8 +2948,11 @@
         </div>
     </div>
 
-
-    
-    <div style="height: 300px;width:1190px;"></div>
+    <div class="ng-footer">
+        <script>
+            $(".ng-footer").load('./footer.html');
+        </script>
+    </div>
+    <script src="./script/index.js"></script>
 </body>
 </html>

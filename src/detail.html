@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/detail.css">
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script src="./thirdplugins/jquery.cookie.js"></script>
 </head>
 <body>
     <div class="ng-toolbar">
@@ -108,44 +109,20 @@
                         <div class="imgzoom-main-cover"></div>
                         <!-- 放大前的图片 -->
                         <a href="#" class="img-view" id="bigImg">
-                            <img src="https://imgservice.suning.cn/uimg1/b2c/image/gOj_y_-xbUKCCLNUzpQx-g.jpg_800w_800h_4e" alt="">
+                            <img src="" alt="">
                         </a>
                         <!-- 放大镜 -->
-                        <div class="imgzoom-glass"></div>
+                        <div class="imgzoom-glass" style="display: none;"></div>
                         <!-- 弹出的放大图片 -->
                         <div class="imgzoom-pop" style="display: none;">
-                            <img src="https://imgservice.suning.cn/uimg1/b2c/image/gOj_y_-xbUKCCLNUzpQx-g.jpg_800w_800h_4e" alt="">
+                            <img src="" alt="">
                         </div>
                     </div>
                     <!-- 放大镜下面的小图 -->
                     <div class="imgzoom-thumb clear-fix">
                         <div class="imgzoom-thumb-main">
                             <ul>
-                                <li>
-                                    <a href="#">
-                                        <img src="https://imgservice.suning.cn/uimg1/b2c/image/q5lGXAt9U76T9UOv2u_kCA.jpg_60w_60h_4e" alt="">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="https://imgservice.suning.cn/uimg1/b2c/image/v-_OPbvJsyOYs0FG1c8bMQ.jpg_60w_60h_4e" alt="">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="https://imgservice.suning.cn/uimg1/b2c/image/q5lGXAt9U76T9UOv2u_kCA.jpg_60w_60h_4e" alt="">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="https://imgservice.suning.cn/uimg1/b2c/image/RS-8SzGXUFqq2NJk9QArWA.jpg_60w_60h_4e" alt="">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="https://imgservice.suning.cn/uimg1/b2c/image/gOj_y_-xbUKCCLNUzpQx-g.jpg_60w_60h_4e" alt="">
-                                    </a>
-                                </li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -159,11 +136,8 @@
             </div>
             <div class="proinfo-main">
                 <div class="proinfo-title">
-                    <h1 id="itemDisplayName">
-                        <span class="zy" id="itemNameZy">自营</span>
-                        贝斯美Bestme婴幼儿菠菜面条240g/盒（30g*8包） 宝宝面条辅食 6个月以上适用
-                    </h1>
-                    <h2 id="promotionDesc"">精选澳洲进口小麦，添加多种营养素，煮后面条柔软&nbsp;&nbsp;</h2>
+                    <h1 id="itemDisplayName"><span class="zy" id="itemNameZy">自营</span><p id="itemNameZyP">你好</p></h1>
+                    <!-- <h2 id="promotionDesc"">精选澳洲进口小麦，添加多种营养素，煮后面条柔软&nbsp;&nbsp;</h2> -->
                 </div>
                 <div class="proinfo-price clear-fix" id="priceDom">
                     <div class="price-container">
@@ -171,9 +145,7 @@
                             <dt>
                                 <span>易购价</span>
                             </dt>
-                            <dd>
-                                <span class="mainprice"><i>¥</i>38.<span>80</span></span>
-                                <a href="#" class="btn-price-notice" >降价通知</a>
+                            <dd><span class="mainprice"></span><a href="#" class="btn-price-notice" >降价通知</a>
                             </dd>
                         </dl>
                         <dl class="super-vipbox">
@@ -260,7 +232,7 @@
                         <dt><span>数量</span></dt>
                         <dd>
                             <a href="#" class="minus"></a>
-                            <input type="text" value="1" max="99">
+                            <input type="text" value="1" max="99" id="inputbuyCount">
                             <a href="#" class="plus"></a>
                         </dd>
                     </dl>
@@ -282,5 +254,20 @@
             </div>            
         </div>
     </div>
+    <!-- 添加购物车成功弹出的对话框 -->
+    <div class="tips" style="display: none;">
+        <div class="tips-container">
+            <div class="tips-title">
+                <h3>温馨提示</h3>
+                <a href="#" class="tips-close"></a>
+                <div class="tips-content clear-fix">
+                    <i class="tips-succ"></i>
+                    <span>已成功加入购物车！</span>
+                    <a href="cart.html" class="tips-gocart"">去购物车结算<i>&gt;</i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script/detail.js"></script>
 </body>
 </html>
