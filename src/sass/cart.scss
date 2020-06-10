@@ -5,6 +5,7 @@
     width:1190px;
     color:#666;
     margin-top:20px;
+    margin-bottom:20px;
 }
 .head-plate{
     margin-bottom:23px;
@@ -147,7 +148,7 @@
             }
             .min-count{
                 background-position:-87px -24px;
-                cursor:no-drop;
+                // cursor:no-drop;
             }
             /* .minus{
                 background-position:-87px 0px;
@@ -189,6 +190,7 @@
             position:absolute;
             top:30%;
             transition:0 -50%;
+            cursor:pointer;
         }
     }
 }
@@ -210,6 +212,7 @@
             .del-check{
                 margin-left:20px;
                 color:#666;
+                cursor:pointer;
             }
     }
     .ct-right{

@@ -68,6 +68,145 @@
             $('.allchecked').prop('checked',false);
         }
         sumPrice();
+    });
 
+    //改变购买商品数量
+    //点击加号增加商品数量
+    //通过当前点击事件在其父级下寻找相关元素，直接通过类名会选取到所有的元素，
+    $('.plus').on('click',function(){
+        let $cargo = $(this).parents('.cargo');
+        let $goodsnum = $cargo.find('.text-count').val();
+        $goodsnum++;
+        //当数量大于1改变减号的背景,解除按钮禁用
+        if($goodsnum>1){
+            $cargo.find('.min-count').css({
+                backgroundPosition:'-87px 0',
+                // cursor:"pointer"
+            })
+        }
+        //当数量大于99改变加号背景并且禁用按钮
+        if($goodsnum>=9){
+            $goodsnum=9;
+            $cargo.find('.max-count').css({
+                backgroundPosition:'-111px -24px',
+                // cursor:'no-drop'
+            });
+        }
+
+        $cargo.find('.text-count').val($goodsnum);
+        //通过当前点击的按钮，在父级元素下找到价格和数量进行计算。
+        $cargo.find('.nd-price em').html(oddPrice($(this)));
+        sumPrice();
+        setCookie($(this));
+    });
+    // 点击减号减少数量
+    $('.minus').on('click',function(){
+        let $cargo = $(this).parents('.cargo');
+        let $goodsnum = $cargo.find('.text-count').val();
+        $goodsnum--;
+        //如果小于等于1改变减号的背景，停止点击事件
+        if($goodsnum<1){
+            $goodsnum = 1;
+            $cargo.find('.min-count').css({
+                backgroundPosition:'-87px -24px',
+            })  
+        }
+        //如果小于99改变加号的背景
+        if($goodsnum<9){
+            $cargo.find('.max-count').css({
+                backgroundPosition:'-111px 0'
+            })
+        }
+
+        $cargo.find('.text-count').val($goodsnum);
+        //通过当前点击的按钮，在父级元素下找到价格和数量进行计算。
+        $cargo.find('.nd-price em').html(oddPrice($(this)));
+        sumPrice();
+        setCookie($(this));  
+    })
+    //在商品数量框中输入输入以后计算价格，修改
+    $('.text-count').on('input',function(){
+        let $reg = /^\d+$/g;//通过正则过滤只能输入数字
+        let $value = $(this).val();
+        if(!$reg.test($value)){
+            $(this).val(1);
+            //如果输入非数字，内容置为1
+        }
+        $(this).parents('.cargo').find('.nd-price em').html(oddPrice($(this)));
+        sumPrice();
+        setCookie($(this));
+    })
+
+
+
+
+
+    //计算单价(封装)
+    function oddPrice(obj){
+        //在传入对象的父级找到价格和数量，父级要加具体限制，不然找到所有的父级元素。
+        let $dj = parseFloat(obj.parents('.cargo').find('.uprice-now em').html());//获取单价
+        let $num = parseInt(obj.parents('.cargo').find('.text-count').val());
+        return ($dj*$num).toFixed(2);
+    }
+
+    //将改变后的数量存放到cookie中
+    let arrsid = [];
+    let arrnum = [];
+    function cookieTurnArray(){
+        if($.cookie('cookiesid')&&$.cookie('cookienum')){
+            arrsid = $.cookie('cookiesid').split(',');
+            arrnum = $.cookie('cookienum').split(',');
+            
+        }else{
+            arrsid = [];
+            arrnum = [];
+        }
+        
+    }
+    //设置cookie的函数(封装)
+    function setCookie(obj){
+        cookieTurnArray();
+        let $sid = obj.parents('.cargo').find('.cargo-img-box img').attr('sid');
+        arrnum[$.inArray($sid,arrsid)] = obj.parents('.cargo').find('.text-count').val();
+        $.cookie('cookienum',arrnum,{expire:10,path:"/"});
+    }
+
+    //删除
+    function delcookie(sid,arrsid){//sid:当前删除的sid arrsid:存放sid的数组
+        let $index = -1;//定义要删除cookie sid的索引位置
+        $.each(arrsid,function(index,value){
+            if(sid===value){
+                $index = index;
+            }
+        });
+        arrsid.splice($index,1);
+        arrnum.splice($index,1);
+
+        $.cookie('cookiesid',arrsid,{expires:10,path:'/'});
+        $.cookie('cookienum',arrnum,{expires:10,path:'/'});
+    }
+    //单个删除
+    $('.ic-del').on('click',function(){
+        cookieTurnArray();
+        if(window.confirm('你确定要删除吗？')){
+            $(this).parents('.cargo').remove();
+            delcookie($(this).parents('.cargo').find('.cargo-img-box img').attr('sid'),arrsid);
+            sumPrice();
+        }
+    });
+    //删除选中商品
+    $('.del-check').on('click',function(){
+        //将cookie转换成数组
+        cookieTurnArray();
+        if(window.confirm('你确定要删除选中商品吗？')){
+            $('.cargo:visible').each(function(){
+                if($(this).find(':checkbox').is(':checked')){//判断当前复选框是否选中
+                    $(this).remove();
+                    //在当前cargo元素下找到img在找到sid
+                    delcookie($(this).find('img').attr('sid'),arrsid);
+                }
+            });
+            sumPrice();
+        }
     })
 }(jQuery);

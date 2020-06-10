@@ -159,9 +159,9 @@
                         <!-- 数量 -->
                         <div class="ic ic-count">
                             <div class="item-count">
-                                <a href="#" class="minus min-count"></a>
-                                <input type="text" class="text-count" data-min="1" data-max="99" value="1">
-                                <a href="" class="plus max-count"></a>
+                                <a class="minus min-count"></a>
+                                <input type="text" class="text-count" data-min="1" data-max="99">
+                                <a class="plus max-count"></a>
                             </div>
                         </div>
                         <!-- 小记 -->
@@ -172,7 +172,7 @@
                             </b>
                         </div>
                         <div class="ic ic-operate">
-                            <a href="#" class="ic-del">删除</a>
+                            <a class="ic-del">删除</a>
                         </div>
                     </div>
                 </div>
@@ -188,7 +188,7 @@
                         <input type="checkbox" class="ctCheck" checked>全选
                     </div> -->
                     <input type="checkbox" class="ct-checkall allchecked">全选
-                    <a href="#" class="del-check">删除选中商品</a>
+                    <a class="del-check">删除选中商品</a>
                 </div>
                 <!-- 右侧 -->
                 <div class="ct-right">
@@ -217,6 +217,11 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="ng-footer">
+        <script>
+            $('.ng-footer').load('./footer.html');
+        </script>
     </div>
     <script src="./script/cart.js"></script>
 </body>

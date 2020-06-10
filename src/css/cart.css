@@ -4,6 +4,7 @@
   width: 1190px;
   color: #666;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .head-plate {
@@ -177,7 +178,6 @@
 
 .item .ic-count .item-count .min-count {
   background-position: -87px -24px;
-  cursor: no-drop;
 }
 
 .item .ic-count .item-count .plus {
@@ -213,6 +213,7 @@
   position: absolute;
   top: 30%;
   transition: 0 -50%;
+  cursor: pointer;
 }
 
 .cart-toolbar {
@@ -236,6 +237,7 @@
 .cart-toolbar .ct-left .del-check {
   margin-left: 20px;
   color: #666;
+  cursor: pointer;
 }
 
 .cart-toolbar .ct-right {
