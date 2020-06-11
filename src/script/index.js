@@ -18,6 +18,19 @@
     $catalogSItem.on('mouseout',function(){
         $(this).hide();
     });
+
+    //根据本地信息，显示用户信息
+    if(localStorage.getItem('username')){
+        $('#reg-bar-node').hide();
+        $('#loginsuccess').show();
+        $('#loginsuccess span').html(localStorage.getItem('username'));
+    }
+    //点击退出，清除localStorage
+    $('.login-quit').on('click',function(){
+        $('#reg-bar-node').show();
+        $('#loginsuccess').hide();
+        localStorage.removeItem('username');
+    })
 }(jQuery);
 
 !function($){

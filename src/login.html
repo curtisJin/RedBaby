@@ -52,15 +52,15 @@
                         </div>
                         <div class="username-box">
                             <div class="input-box">
-                                <input type="text" id="userName" autocomplete="off" tabindex="1" maxlength="64">
-                                <label for="">用户名/手机/邮箱</label>
+                                <input type="text" id="userName" autocomplete="off" tabindex="1" maxlength="64" placeholder="用户名/手机/邮箱/">
+                                <!-- <label for="">用户名/手机/邮箱</label> -->
                                 <i class="icon username-icon"></i>
                             </div>
                         </div>
                         <div class="password-box">
                             <div class="input-box">
-                                <input type="password" id="passWord" autocomplete="off" tabindex="2">
-                                <label for="">密码</label>
+                                <input type="password" id="passWord" autocomplete="off" tabindex="2" placeholder="密码">
+                                <!-- <label for="">密码</label> -->
                                 <i class="icon password-icon"></i>
                             </div>
                         </div>
@@ -93,5 +93,7 @@
             $('.ng-s-footer').load('./ngsFooter.html');
         </script>
     </div>
+    <script src="./script/sha1.js"></script>
+    <script src="./script/login.js"></script>
 </body>
 </html>

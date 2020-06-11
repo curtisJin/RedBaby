@@ -161,6 +161,10 @@
   margin-left: -36px;
 }
 
+.login-form .pc-login .username-login .input-box input::-webkit-input-placeholder {
+  color: #ccc;
+}
+
 .login-form .pc-login .username-login .input-box label {
   position: absolute;
   left: 0;
@@ -173,6 +177,7 @@
   cursor: text;
   color: #ccc;
   background: #fff;
+  pointer-events: none;
 }
 
 .login-form .pc-login .username-login .input-box .icon {
@@ -225,6 +230,7 @@
   font-weight: 700;
   color: #fff;
   text-align: center;
+  cursor: pointer;
 }
 
 .login-form .free-reg {

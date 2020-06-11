@@ -94,8 +94,12 @@
             <div class="ng-toolbar-right">
                 <!-- 登录注册 -->
                 <div class="ng-bar-node reg-bar-node" id="reg-bar-node">
-                    <a href="javascript:SFE.base.logonurl();" class="login">请登录</a>
-                    <a href="#" class="login reg-bbb">注册有礼</a>
+                    <a href="./login.html" class="login">请登录</a>
+                    <a href="./reg.html" class="login reg-bbb">注册有礼</a>
+                </div>
+                <div class="ng-bar-node reg-bar-node" id="loginsuccess" style="display:none;">
+                    欢迎您:<span></span>
+                    <a class="login reg-bbb login-quit" style="cursor:pointer;">退出</a>
                 </div>
                 <!-- 我的订单 -->
                 <div class="ng-bar-node-box myorder-handle" >
@@ -2953,6 +2957,7 @@
             $(".ng-footer").load('./footer.html');
         </script>
     </div>
+    <script src="./script/indexhot.js"></script>
     <script src="./script/index.js"></script>
 </body>
 </html>

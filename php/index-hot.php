@@ -1,9 +1,9 @@
 <?php
 include "conn.php";
 
-$pagesize = 9; //单个页面展示的数据条数
+$pagesize = 8; //单个页面展示的数据条数
 
-$sql = "SELECT * from taobaogoods"; //获取所有的数据
+$sql = "SELECT * from indexgoods"; //获取所有的数据
 $result = $conn->query($sql); //获取数据的结果集(记录集)
 
 $num = $result->num_rows; //记录集的总条数  22
@@ -28,7 +28,7 @@ $page = ($pagevalue - 1) * $pagesize;
 //limit 10,10  从偏移量5开始 取10条
 //limit 20,10 从偏移量14开始 取10条
 
-$sql1 = "SELECT * from taobaogoods limit $page,$pagesize";
+$sql1 = "SELECT * from indexgoods limit $page,$pagesize";
 $res = $conn->query($sql1);
 
 
