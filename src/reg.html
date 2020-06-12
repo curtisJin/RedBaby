@@ -15,10 +15,10 @@
     <div class="header">
         <a href="//www.suning.com" class="logo"></a>
         <div class="logo-text">欢迎注册</div>
-        <a href="#" class="login">我已经注册，马上登录></a>
+        <a href="http://localhost:8080/RedBaby/src/login.html" class="login">我已经注册，马上登录></a>
     </div>
     <div class="main">
-        <form action="#" autocomplete="off" method="POST">
+        <form action="http://localhost:8080/RedBaby/php/registry.php" autocomplete="off" method="POST">
             <div class="reg-form">
                 <div class="gift-pkg">
                     <i></i>注册领<em>199</em>元大礼包
@@ -27,23 +27,23 @@
                     <div class="input-box">
                         <label class="title">用户名</label>
                         <div class="input-wrapper">
-                            <input type="text" maxlength="22">
-                            <label class="placeholder">建议使用常用的手机号</label>
+                            <input type="text" maxlength="22" id="inputUsername" name="username">
+                            <label class="placeholder">请输入用户名</label>
                         </div>
                     </div>
-                    <div class="error-msg">格式不正确，请输入正确的格式</div>
+                    <div class="error-msg"></div>
                 </div>
                 <div class="password-field">
                     <div class="input-box" style="margin-bottom:0;">
                         <label class="title">设置密码</label>
                         <div class="input-wrapper">
-                            <input type="password" maxlength="20">
+                            <input type="password" maxlength="20" id="inputPassword" name="password">
                             <label class="placeholder">请输入密码</label>
                         </div>
                     </div>
                     <div class="errorAndlevel">
-                        <div class="error-msg">请输入正确的密码</div>
-                        <div class="security-level">
+                        <div class="error-msg"></div>
+                        <div class="security-level" style="display:none;">
                             <span>安全程度：</span>
                             <span class="level level1">低</span>
                             <span class="level level2">中</span>
@@ -55,23 +55,24 @@
                     <div class="input-box">
                         <label class="title">确认密码</label>
                         <div class="input-wrapper">
-                            <input type="password" maxlength="20">
+                            <input type="password" maxlength="20" id="repeatPassword">
                             <label class="placeholder">再次输入您的密码</label>
                         </div>
                     </div>
-                    <div class="error-msg">重复输入不正确，请重新输入</div>
+                    <div class="error-msg"></div>
                 </div>
                 <div class="phonenum-field">
                     <div class="input-box">
                         <label class="title">手机号</label>
                         <div class="input-wrapper">
-                            <input type="password" maxlength="11">
+                            <input type="text" maxlength="11" id="inputPhonenum" name="phone">
                             <label class="placeholder">请输入手机号</label>
                         </div>
                     </div>
-                    <div class="error-msg">手机号输入不正确，请重新输入</div>
+                    <div class="error-msg"></div>
                 </div>
-                <a href="#" class="submit-btn" id="save">提交注册</a>
+                <input type="submit" class="submit-btn" id="save" value="提交注册" name="submit">
+                <!-- <a href="#" class="submit-btn" id="save">提交注册</a> -->
                 <a href="#" class="enter-reg"><i></i>企业用户注册></a>
             </div>
         </form>
@@ -81,5 +82,6 @@
             $('.ng-s-footer').load('./ngsFooter.html');
         </script>
     </div>
+    <script src="./script/reg.js"></script>
 </body>
 </html>

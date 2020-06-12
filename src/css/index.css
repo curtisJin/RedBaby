@@ -438,8 +438,53 @@
   overflow: hidden;
 }
 
+.hot-recommend .hr-content .hrc-big {
+  float: left;
+  width: 222px;
+  height: 381px;
+  position: relative;
+}
+
+.hot-recommend .hr-content .hrc-big a {
+  display: block;
+  width: 222px;
+  height: 381px;
+}
+
+.hot-recommend .hr-content .hrc-big img {
+  width: 222px;
+  height: 331px;
+}
+
+.hot-recommend .hr-content .hrc-big .hrc-detail {
+  position: absolute;
+  z-index: 3;
+  top: 11px;
+  left: 15px;
+  width: 190px;
+}
+
+.hot-recommend .hr-content .hrc-big .hrc-detail .hrcd-intro {
+  display: block;
+  height: 48px;
+  font: bold 16px/1.5 'microsoft yahei';
+  overflow: hidden;
+}
+
+.hot-recommend .hr-content .hrc-big .hrc-addcart {
+  position: absolute;
+  z-index: 4;
+  top: 110px;
+  left: 17px;
+  width: 30px;
+  height: 30px;
+  background: url(../img/index-bg.png) -33px -20px;
+  font-size: 0;
+  cursor: pointer;
+}
+
 .hot-recommend .hr-content ul {
-  width: 1180px;
+  width: 948px;
   margin-right: 0;
 }
 
@@ -469,21 +514,6 @@
   background: url(../img/loading.gif) 50% 50% no-repeat;
   width: 236px;
   height: 165px;
-}
-
-.hot-recommend .hr-content ul li.hrc-big {
-  width: 222px;
-  height: 381px;
-}
-
-.hot-recommend .hr-content ul li.hrc-big a {
-  width: 222px;
-  height: 381px;
-}
-
-.hot-recommend .hr-content ul li.hrc-big img {
-  width: 222px;
-  height: 331px;
 }
 
 .hot-recommend .hr-content ul .hrc-detail {
@@ -545,6 +575,9 @@
   padding: 10px 0;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 2px 2px #ddd;
+  background: #fff;
+  z-index: 9999;
+  width: 100%;
 }
 
 .fixed-stairs .fs-content {
@@ -574,6 +607,11 @@
   padding-left: 7px;
   overflow: hidden;
   width: 1095px;
+}
+
+.fixed-stairs .fs-content .fs-items .moveNow {
+  background: #fe0350;
+  color: #fff;
 }
 
 .fixed-stairs .fs-content li {

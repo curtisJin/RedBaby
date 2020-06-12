@@ -103,6 +103,7 @@
   color: #cacaca;
   width: 100%;
   height: 100%;
+  pointer-events: none;
 }
 
 .reg-form .errorAndlevel {
@@ -141,6 +142,8 @@
   background: #f60;
   color: #fff;
   margin: 24px 0 5px;
+  border: 0px !important;
+  cursor: pointer;
 }
 
 .reg-form .enter-reg {

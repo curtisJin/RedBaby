@@ -398,8 +398,50 @@
         margin-left:10px;
         background:#fff;
         overflow: hidden;
+        // 大图效果
+        .hrc-big{
+            float:left;
+            width:222px;
+            height:381px;
+            position:relative;
+            a{
+                display:block;
+                width:222px;
+                height:381px;
+            }
+            img{
+                width:222px;
+                height:331px;
+            }
+            .hrc-detail{
+                position: absolute;
+                z-index: 3;
+                top: 11px;
+                left: 15px;
+                width: 190px;
+                .hrcd-intro{
+                    display: block;
+                    height: 48px;
+                    font: bold 16px/1.5 'microsoft yahei';
+                    overflow: hidden;
+                }   
+            }
+
+            //添加购物车
+            .hrc-addcart{
+                position: absolute;
+                z-index: 4;
+                top: 110px;
+                left: 17px;
+                width: 30px;
+                height: 30px;
+                background: url(../img/index-bg.png) -33px -20px;
+                font-size: 0;
+                cursor: pointer
+            }
+        }
         ul{
-            width:1180px;
+            width:948px;
             margin-right:0;
             li{
                 position:relative;
@@ -424,19 +466,6 @@
                     background: url(../img/loading.gif) 50% 50% no-repeat;
                     width:236px;
                     height:165px;
-                }
-            }
-            // 大图效果
-            li.hrc-big{
-                width:222px;
-                height:381px;
-                a{
-                    width:222px;
-                    height:381px;
-                }
-                img{
-                    width:222px;
-                    height:331px;
                 }
             }
 
@@ -500,6 +529,9 @@
     padding:10px 0;
     border-bottom:1px solid #ddd;
     box-shadow:0 2px 2px #ddd;
+    background:#fff;
+    z-index:9999;
+    width:100%;
     .fs-content{
         width:1190px;
         margin:0 auto;
@@ -523,6 +555,10 @@
             padding-left:7px;
             overflow:hidden;
             width:1095px;
+            .moveNow{
+                background:#fe0350;
+                color:#fff;
+            }
         }
         li{
             float:left;

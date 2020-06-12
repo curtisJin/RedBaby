@@ -91,6 +91,8 @@
                 color:#cacaca;
                 width:100%;
                 height:100%;
+                //事件穿透
+                pointer-events: none;
             }
         }
     }
@@ -127,6 +129,8 @@
         background:#f60;
         color:#fff;
         margin:24px 0 5px;
+        border:0px!important;
+        cursor: pointer;
     }
     .enter-reg{
         color:#f60;
