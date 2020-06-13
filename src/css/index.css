@@ -349,7 +349,6 @@
   margin: 0 auto;
   height: 267px;
   margin-top: 10px;
-  background: paleturquoise;
 }
 
 .accordion ul {
@@ -363,7 +362,6 @@
   float: left;
   width: 159px;
   height: 265px;
-  background-color: #f60;
 }
 
 .accordion li .a-small {
@@ -763,4 +761,42 @@
   background: url(../img/index-bg.png) -33px -20px;
   font-size: 0;
   cursor: pointer;
+}
+
+.backtop-bar li {
+  display: block;
+  width: 38px;
+  height: 38px;
+  border: 1px solid #cecece;
+  border-radius: 2px;
+  background: #efefef;
+  cursor: pointer;
+}
+
+.backtop-bar li span {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin: 7px 0 0 7px;
+  background: url(../img/index-bg.png) no-repeat -167px -20px;
+}
+
+.backtop-bar li a {
+  width: 30px;
+  height: 30px;
+  padding: 4px;
+  color: #fff;
+  line-height: 14px;
+  text-align: center;
+  overflow: hidden;
+  background: #d00;
+  display: none;
+}
+
+.backtop-bar li:hover span {
+  display: none;
+}
+
+.backtop-bar li:hover a {
+  display: block;
 }

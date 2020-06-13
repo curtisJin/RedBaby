@@ -177,5 +177,28 @@
         },function(){
             Scroll();//点击结束继续滚轮事件
         })
+    });
+
+    //点击返回顶部
+    $('.backtop-bar li').on('click',function(){
+        $(window).off('scroll');
+        $("html,body").animate({
+            scrollTop:0
+        },function(){
+            Scroll();//点击结束继续滚轮事件
+        })
+    })
+}(jQuery);
+
+//手风琴效果
+!function($){
+    //鼠标划到当前li添加类名.a-on
+    let timer = null;
+    $('.accordion li').hover(function(){
+        timer = setTimeout(()=>{
+            $(this).addClass('a-on').stop().animate({width:548},200).siblings().removeClass('a-on').stop().animate({width:159},200);
+        },100);
+    },function(){
+        clearTimeout(timer);
     })
 }(jQuery)

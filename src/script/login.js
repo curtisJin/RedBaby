@@ -24,6 +24,7 @@
             url:'http://localhost:8080/RedBaby/php/login.php',
             data:{
                 user:$('#userName').val(),
+                // 获取密码是注意编码的转换，要加hex_sha1
                 password:hex_sha1($('#passWord').val())
             }
         }).done(function(res){

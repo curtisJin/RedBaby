@@ -324,7 +324,6 @@
     margin:0 auto;
     height:267px;
     margin-top:10px;
-    background:paleturquoise;
     ul{
         border:1px solid #ddd;
         height:265px;
@@ -335,7 +334,6 @@
         float:left;
         width:159px;
         height:265px;
-        background-color: #f60;
         .a-small{
             display: block;
             width: 160px;
@@ -697,5 +695,42 @@
             font-size: 0;
             cursor: pointer;
         }
+    }
+}
+//返回顶部按钮
+.backtop-bar li{
+    display: block;
+    width:38px;
+    height:38px;
+    border:1px solid #cecece;
+    border-radius:2px;
+    background:#efefef;
+    cursor: pointer;
+    span{
+        display:block;
+        width:24px;
+        height:24px;
+        margin:7px 0 0 7px;
+        background:url(../img/index-bg.png) no-repeat -167px -20px;
+    }
+    a{
+        width:30px;
+        height:30px;
+        padding:4px;
+        color:#fff;
+        line-height:14px;
+        text-align:center;
+        overflow:hidden;
+        background:#d00;
+        display:none;
+    }
+}
+//鼠标滑过效果
+.backtop-bar li:hover{
+    span{
+        display:none;
+    }
+    a{
+        display:block;
     }
 }
