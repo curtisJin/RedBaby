@@ -1,0 +1,30 @@
+{
+  "name": "RedBaby",
+  "version": "1.0.0",
+  "description": "红孩子母婴商城数据仓库",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/curtisJin/RedBaby.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/curtisJin/RedBaby/issues"
+  },
+  "homepage": "https://github.com/curtisJin/RedBaby#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-minify-html": "^1.0.6",
+    "gulp-uglify": "^3.0.2"
+  }
+}
